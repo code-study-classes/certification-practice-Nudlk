@@ -76,3 +76,44 @@ function extractFileName(fullFileName) {
 
 console.log(extractFileName('C:/Users/username/Documents/example.txt'));
 // Задание 9
+function encryptSentence(sentence) {
+  let a = '';
+  let b = '';
+
+  for (let i = 0; i < sentence.length; ++i) {
+    if (i % 2 === 0) {
+      a += sentence[i];
+    } else {
+      b = sentence[i] + b;
+    }
+  }
+  const word = a + b;
+  return word.split('').reverse().join('');
+}
+
+console.log(encryptSentence('JavaScript'));
+// Задание 10
+function checkBrackets(expression) {
+let stack = [];
+
+for(let i = 0; i < expression.length; i++) {
+    if(expression[i] === '(') {
+        stack.push(i);
+    } else if(expression[i] === ')') {
+        if(stack.length === 0) {
+            return ++i;
+        }
+        stack.pop();
+    }
+}
+
+if(stack.length > 0) {
+    return -1;
+} else {
+    return 0;
+}
+}
+
+console.log(checkBrackets('((a + b) * (c - d))'));
+
+export {countUppercaseLetters, combineStrings, containsSubstring, replaceSubstring, countWordsWithSameLetters, countWordsWithA, normalizeSpaces, extractFileName, encryptSentence, checkBrackets};

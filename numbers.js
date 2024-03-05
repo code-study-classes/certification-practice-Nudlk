@@ -64,3 +64,4 @@ return Math.floor( x * y);
 }
 console.log(countSquares(10, 10, 5));
 export { calculateDistance, calculateSegmentProduct, calculateKilobytes, calculateSegments, calculateDigitSum,  swapHundredsAndTens, getHundredsDigit, getFullHours, getDayOfWeek, countSquares };
+ 

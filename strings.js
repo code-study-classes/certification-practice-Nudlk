@@ -21,7 +21,7 @@ function combineStrings(N1, N2, S1, S2) {
     return (First + Second);
 }
 
-console.log(combineStrings(3, 2, 'Hello', 'World'));
+console.log(combineStrings(0, 0, 'abc', 'def'));
 // Задание 3
 function containsSubstring(S, S0) {
     return S.includes(S0);

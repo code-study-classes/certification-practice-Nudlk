@@ -81,7 +81,9 @@ function normalizeSpaces(sentence) {
 // Задание 8
 function extractFileName(fullFileName) {
     let word = fullFileName.split('/').pop();
-    return (word.split('.').slice(0, -1).join('.'));
+    let c = word.replace(/[^.]/g, "").length;
+    return (word.split('.').slice(0, -c).join('.'));
+
 }
 
 console.log(extractFileName('C:/Users/username/Documents/example.txt'));

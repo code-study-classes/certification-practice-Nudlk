@@ -15,13 +15,13 @@ function countUppercaseLetters(str) {
  
         console.log(countUppercaseLetters('HellO, World!'));
 // Задание 2
-function combineStrings(N1, N2, S1, S2) {
+unction combineStrings(N1, N2, S1, S2) {
     let First = S1.slice(0, N1);
     let Second = S2.slice(-N2);
-    if (N1 != 0 && N2 != 0) {
-        return (First + Second);;
-    } else {
+    if (N1 === 0 && N2 === 0) {
         return "";
+    } else {
+        return (First + Second);;
     }
 }
 

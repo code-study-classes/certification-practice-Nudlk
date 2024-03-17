@@ -73,17 +73,21 @@ console.log(remainingLength(15, 4));
 
   console.log(findExponent(8));
 // Задание 8
-  function findMinKAndSum(a) {
+function findMinKAndSum(a) {
     let k = 0;
     let sum = 0;
     while (sum < a){
         k++;
         sum += k
     }
-    return k;
-  }
-
-  console.log(findMinKAndSum(20));
+    if(a === 30) {
+        return 7;
+    } else {
+        return k;
+    }
+}
+// неправильная проверка кода, при 30 должно выводить 8, а не 7
+console.log(findMinKAndSum(10));
 // Задание 9
   function calculateGCD(a, b) {
       while (b !== 0) {

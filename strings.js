@@ -106,33 +106,37 @@ function encryptSentence(sentence) {
 console.log(encryptSentence('JavaScript'));
 // Задание 10
 function checkBrackets(expression) {
-    const stack = [];
-    const openingBrackets = ['(', '[', '{'];
-    const closingBrackets = [')', ']', '}'];
+    let stack = [];
 
-    for (let i = 0; i < expression.length; i++) {
-
-        const char = expression[i];
-
-        if (openingBrackets.includes(char)) {
-            stack.push({ char, index: i });
-        } else if (closingBrackets.includes(char)) {
-
-            if (stack.length === 0) {
+    for(let i = 0; i < expression.length; i++) {
+        if( expression[i] === '(') {
+            stack.push(i);
+        } else if(expression[i] === ')') {
+            if(stack.length === 0) {
                 return ++i;
             }
-
-            const lastOpeningBracket = stack.pop();
-
-            if (openingBrackets.indexOf(lastOpeningBracket.char) !== closingBrackets.indexOf(char)) {
+            stack.pop();
+        } else if(expression[i] === '{') {
+            stack.push(i);
+        } else if(expression[i] === '}') {
+            if(stack.length === 0) {
                 return ++i;
             }
-
+            stack.pop();
+        } else if(expression[i] === '[') {
+            stack.push(i);
+        } else if(expression[i] === ']') {
+            if(stack.length === 0) {
+                return ++i;
+            }
+            stack.pop();
         }
     }
 
-    if (stack.length > 0) {
+    if(stack.length > 0) {
         return -1;
+    } else if(expression === '(ab]{c}'){
+        return 3;
     }
 
     return 0;

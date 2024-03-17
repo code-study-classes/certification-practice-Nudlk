@@ -73,11 +73,11 @@ function countWordsWithA(sentence) {
 console.log(countWordsWithA('This is a sample sentence.'));
 // Задание 7
 function normalizeSpaces(sentence) {
-   let fix = sentence.replace(/\s+/g, ' ');
-    return (fix);
-}
-
-console.log(normalizeSpaces('  This  is   a   sample    sentence. '));
+    let fix = sentence.replace(/\s+/g, ' ').trim();
+     return (fix);
+ }
+ 
+ console.log(normalizeSpaces('  This  is   a   sample    sentence. '));
 // Задание 8
 function extractFileName(fullFileName) {
     let word = fullFileName.split('/').pop();

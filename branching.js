@@ -15,7 +15,7 @@ function getIndexOfSmallerNumber(number1, number2) {
     }   else if (number2 < number1) {
         return 2;
     }   else {
-        return "Числа равны";
+        return 1;
     }
 }
 console.log(getIndexOfSmallerNumber(5, 3));
@@ -69,23 +69,21 @@ console.log(calculateF(1.5));
 
 // Задание 6
 function describeNumber(n) {
+  if (n < 10) {
+    return "нечетное однозначное число";
+  } else if (n < 100) {
     if (n % 2 === 0) {
-    if (n >= 100) {
-        return "24";
-} else if (n >= 10) {
-    return "24";
-} else {
-    return "5";
-}
-} else {
-    if (n >= 100) {
-        return "137";
-} else if (n >= 10) {
-    return "23";
-} else {
-    return "5";
-}
-}
+      return "четное двузначное число";
+    } else {
+      return "нечетное двузначное число";
+    }
+  } else {
+    if (n % 2 === 0) {
+      return "четное трехзначное число";
+    } else {
+      return "нечетное трехзначное число";
+    }
+  }
 }
 console.log(describeNumber(24));
 

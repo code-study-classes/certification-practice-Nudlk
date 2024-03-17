@@ -16,8 +16,8 @@ function countUppercaseLetters(str) {
         console.log(countUppercaseLetters('HellO, World!'));
 // Задание 2
 function combineStrings(N1, N2, S1, S2) {
-    First = S1.slice(0, N1);
-    Second = S2.slice(-N2);
+    let First = S1.slice(0, N1);
+    let Second = S2.slice(-N2);
     return (First + Second);
 }
 
@@ -30,7 +30,7 @@ function containsSubstring(S, S0) {
 console.log(containsSubstring('Hello, World!', 'World'));
 // Задание 4
 function replaceSubstring(S, S1, S2) {
-    S0 = S.replace(S1, S2);
+    let S0 = S.replace(S1, S2);
     return (S0);
 }
 
@@ -63,7 +63,7 @@ function countWordsWithA(sentence) {
 console.log(countWordsWithA('This is a sample sentence.'));
 // Задание 7
 function normalizeSpaces(sentence) {
-   fix = sentence.replace(/\s+/g, ' ');
+   let fix = sentence.replace(/\s+/g, ' ');
     return (fix);
 }
 

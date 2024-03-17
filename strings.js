@@ -44,14 +44,14 @@ function countWordsWithSameLetters(sentence) {
     let count = 0;
     let words = sentence.split(" ");
  for (let i = 0; i < words.length; i++) {
-        if (words[i][0].toUpperCase() === words[i][words[i].length - 1].toUpperCase()) {
+        if (words[i][0] === words[i][words[i].length - 1]) {
             count++;
         }
     }
     return (count);
 }
 
-console.log(countWordsWithSameLetters('Racecar radar level Civic'));
+console.log(countWordsWithSameLetters('Racecar radar level Civic'.toLowerCase()));
 // Задание 6
 function countWordsWithA(sentence) {
     let words = sentence.split(" ");

@@ -151,7 +151,7 @@ function describeAge(age) {
             first_num = "сорок";
             break;
         case 5:
-            first_num = "пятьдеят";
+            first_num = "пятьдеcят";
             break;
         case 6:
             first_num = "шестьдесят";

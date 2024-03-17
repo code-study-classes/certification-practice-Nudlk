@@ -36,7 +36,7 @@ console.log(checkOddThreeDigitNumber(-789));
 
 //Задание 7
 function checkUniqeDigits(x1) {
-    x2 = Math.abs(x1);
+    let x2 = Math.abs(x1);
     return Boolean((Math.floor(x2/100) != x2%10 && x2%10 != Math.floor(x2%100/10) && Math.floor(x2/100) != Math.floor(x2%100/10)));
 }
 console.log(checkUniqeDigits(-77));

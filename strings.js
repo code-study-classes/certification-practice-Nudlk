@@ -43,15 +43,20 @@ console.log(replaceSubstring('Hello, World!', 'World', 'Universe'))
 function countWordsWithSameLetters(sentence) {
     let count = 0;
     let words = sentence.split(" ");
- for (let i = 0; i < words.length; i++) {
-        if (words[i][0] === words[i][words[i].length - 1]) {
-            count++;
+    for (let i = 0; i < words.length; i++) {
+            if (words[i][0] === words[i][words[i].length - 1]) {
+                count++;
         }
     }
-    return (count);
+
+    if (sentence != "") {
+        return (count);
+    } else {
+        return(0);
+    }
 }
 
-console.log(countWordsWithSameLetters('Racecar radar level Civic'.toLowerCase()));
+console.log(countWordsWithSameLetters('Moon Mellow Muffin'.toLowerCase()));
 // Задание 6
 function countWordsWithA(sentence) {
     let words = sentence.split(" ");

@@ -41,6 +41,7 @@ function replaceSubstring(S, S1, S2) {
 console.log(replaceSubstring('Hello, World!', 'World', 'Universe'))
 // Задание 5
 function countWordsWithSameLetters(sentence) {
+    sentence = sentence.toLowerCase()
     let count = 0;
     let words = sentence.split(" ");
     for (let i = 0; i < words.length; i++) {
@@ -49,14 +50,14 @@ function countWordsWithSameLetters(sentence) {
         }
     }
 
-    if (sentence === "") {
-        return(0);
-    } else {
+    if (sentence != "") {
         return (count);
+    } else {
+        return(0);
     }
 }
 
-console.log(countWordsWithSameLetters('Moon Mellow Muffin'.toLowerCase()));
+console.log(countWordsWithSameLetters('Hello world Willow'));
 // Задание 6
 function countWordsWithA(sentence) {
     let words = sentence.split(" ");

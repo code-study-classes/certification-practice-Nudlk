@@ -109,9 +109,23 @@ function checkBrackets(expression) {
 let stack = [];
 
 for(let i = 0; i < expression.length; i++) {
-    if(expression[i] === '(') {
+    if( expression[i] === '(') {
         stack.push(i);
     } else if(expression[i] === ')') {
+        if(stack.length === 0) {
+            return ++i;
+        }
+        stack.pop();
+    } else if(expression[i] === '{') {
+        stack.push(i);
+    } else if(expression[i] === '}') {
+        if(stack.length === 0) {
+            return ++i;
+        }
+        stack.pop();
+    } else if(expression[i] === '[') {
+        stack.push(i);
+    } else if(expression[i] === ']') {
         if(stack.length === 0) {
             return ++i;
         }

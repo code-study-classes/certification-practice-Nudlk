@@ -64,4 +64,4 @@ return (x1 + y1) % 2 === (x2 + y2) % 2;
 }
 
 console.log(areSameColorFields(1, 1, 2, 2));
-export{inPositive, isOdd, checkInequality, checkInequality2, checkBetweenNumbers, checkOddThreeDigitNumber, checkUniqeDigits, isSecondQuadrant, isIsoscelesTriangle, areSameColorFields};
+export{isPositive, isOdd, checkInequality, checkInequality2, checkBetweenNumbers, checkOddThreeDigitNumber, checkUniqueDigits, isSecondQuadrant, isIsoscelesTriangle, areSameColorFields};

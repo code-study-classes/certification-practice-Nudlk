@@ -73,7 +73,7 @@ console.log(remainingLength(15, 4));
 
   console.log(findExponent(8));
 // Задание 8
-  function findMinKAndMax(a) {
+  function findMinKAndSum(a) {
     let k = 0;
     let sum = 0;
     while (sum < a){
@@ -83,7 +83,7 @@ console.log(remainingLength(15, 4));
     return k;
   }
 
-  console.log(findMinKAndMax(20));
+  console.log(findMinKAndSum(20));
 // Задание 9
   function calculateGCD(a, b) {
       while (b !== 0) {
@@ -113,4 +113,4 @@ function findFibonacciIndex(N) {
 }
 
 console.log(findFibonacciIndex(13));
-  export {sumOfSquares, power, factorialProduct, fibonacciSequence, sumOfPowers, remainingLength, findExponent, findMinKAndMax, calculateGCD, findFibonacciIndex};
+  export {sumOfSquares, power, factorialProduct, fibonacciSequence, sumOfPowers, remainingLength, findExponent, findMinKAndSum, calculateGCD, findFibonacciIndex};

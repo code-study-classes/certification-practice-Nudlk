@@ -91,24 +91,24 @@ console.log(describeNumber(24));
 function getDayName(dayNumber) {
     switch (dayNumber) {
         case 1:
-            return "monday";
+            return "Monday";
         case 2:
-            return "tuesday";
+            return "Tuesday";
         case 3:
-            return "wednesday";
+            return "Wednesday";
         case 4:
-            return "thursday";
+            return "Thursday";
         case 5:
-            return "friday";
+            return "Friday";
         case 6:
-            return "saturday";
+            return "Saturday";
         case 7:
-            return "sunday";
+            return "Sunday";
         default:
             return "Invalid day number.";
     }
 }
-console.log(getDayName(3));
+console.log(getDayName(1));
 
 // Задание 8
 function convertToMeters(unitNumber, lengthInUnits) {
@@ -138,24 +138,61 @@ console.log(convertToMeters(4, 12));
 
 // Задание 9
 function describeAge(age) {
-    let ageString = age.toString();
-    let lastDigit = ageString.charAt(ageString.length-1);
-    let result = age;
-    switch (lastDigit) {
-        case "1":
-            result = ageString;
+    let first_num = Math.floor(age / 10);
+    let second_num = age % 10;
+    switch(first_num) {
+        case 2:
+            first_num = "двадцать";
             break;
-        case "2":
-        case "3":
-        case "4":
-            result = ageString;
+        case 3:
+            first_num = "тридцать";
             break;
-        default:
+        case 4:
+            first_num = "сорок";
+            break;
+        case 5:
+            first_num = "пятьдеят";
+            break;
+        case 6:
+            first_num = "шестьдесят";
             break;
     }
-    return result;
+    switch(second_num) {
+        case 0:
+            second_num = "лет";
+            break;
+        case 1:
+            second_num = "один год";
+            break;
+        case 2:
+            second_num = "два года";
+            break;
+        case 3:
+            second_num = "три года";
+            break;
+        case 4:
+            second_num = "четыре года";
+            break;
+        case 5:
+            second_num = "пять лет";
+            break;
+        case 6:
+            second_num = "шесть лет";
+            break;
+        case 7:
+            second_num = "семь лет";
+            break;
+        case 8:
+            second_num = "восемь лет";
+            break;
+        case 9:
+            second_num = "девять лет";
+            break;
+    }
+ return first_num + " " + second_num;
 }
-console.log(describeAge(32));
+
+console.log(describeAge(45));
 
 // Задание 10
 function describeNumber2(number) {

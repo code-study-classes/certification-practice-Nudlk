@@ -52,14 +52,15 @@ function sumOfSquares(a, b) {
 
   console.log(sumOfPowers(3));
 // Задание 6
-  function remainingLength(a, n) {
-    while (a-n > 0){
-      a -= n;
+ function remainingLength(a, b) {
+    let c = 0
+    while (a-b > 0){
+      a -= b;
     }
-    return a;
+    return c = Math.floor(a % b);
   }
 
-  console.log(remainingLength(15, 4));
+console.log(remainingLength(15, 4));
 // Задание 7
   function findExponent(n) {
     let k = 0;
@@ -72,7 +73,7 @@ function sumOfSquares(a, b) {
 
   console.log(findExponent(8));
 // Задание 8
-  function findMinAndMax(a) {
+  function findMinKAndMax(a) {
     let k = 0;
     let sum = 0;
     while (sum < a){
@@ -82,9 +83,9 @@ function sumOfSquares(a, b) {
     return k;
   }
 
-  console.log(findMinAndMax(20));
+  console.log(findMinKAndMax(20));
 // Задание 9
-  function CalculateGCD(a, b) {
+  function calculateGCD(a, b) {
       while (b !== 0) {
           let h = b;
           b = a % b;
@@ -93,20 +94,23 @@ function sumOfSquares(a, b) {
       return a;
   }
 
-  console.log(CalculateGCD(27, 81));
+  console.log(calculateGCD(27, 81));
 // Задание 10
-  function findFibonacciIndex(a) {
-  let h = 2;
-  let sum = 1;
-  let k = 1;
-      while (a > k) {
-        h += 1;
-        let l = sum+k;
-        sum = k;
-        k = l;
-      }
-      return h;
+function findFibonacciIndex(N) {
+  let a = 1;
+  let b = 1;
+  let index = 2;
+  if (N == 1) {
+      return N;
   }
+  while (b !== N) {
+    let next = a + b;
+    a = b;
+    b = next;
+    index++;
+  }
+  return index;
+}
 
-  console.log(findFibonacciIndex(55));
-  export {sumOfSquares, power, factorialProduct, fibonacciSequence, sumOfPowers, remainingLength, findExponent, findMinAndMax, CalculateGCD, findFibonacciIndex};
+console.log(findFibonacciIndex(13));
+  export {sumOfSquares, power, factorialProduct, fibonacciSequence, sumOfPowers, remainingLength, findExponent, findMinKAndMax, calculateGCD, findFibonacciIndex};

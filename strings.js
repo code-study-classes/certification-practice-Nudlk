@@ -49,10 +49,10 @@ function countWordsWithSameLetters(sentence) {
         }
     }
 
-    if (sentence != "") {
-        return (count);
-    } else {
+    if (sentence === "") {
         return(0);
+    } else {
+        return (count);
     }
 }
 

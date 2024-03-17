@@ -106,38 +106,36 @@ function encryptSentence(sentence) {
 console.log(encryptSentence('JavaScript'));
 // Задание 10
 function checkBrackets(expression) {
-let stack = [];
+    const stack = [];
+    const openingBrackets = ['(', '[', '{'];
+    const closingBrackets = [')', ']', '}'];
 
-for(let i = 0; i < expression.length; i++) {
-    if( expression[i] === '(') {
-        stack.push(i);
-    } else if(expression[i] === ')') {
-        if(stack.length === 0) {
-            return ++i;
+    for (let i = 0; i < expression.length; i++) {
+
+        const char = expression[i];
+
+        if (openingBrackets.includes(char)) {
+            stack.push({ char, index: i });
+        } else if (closingBrackets.includes(char)) {
+
+            if (stack.length === 0) {
+                return ++i;
+            }
+
+            const lastOpeningBracket = stack.pop();
+
+            if (openingBrackets.indexOf(lastOpeningBracket.char) !== closingBrackets.indexOf(char)) {
+                return ++i;
+            }
+
         }
-        stack.pop();
-    } else if(expression[i] === '{') {
-        stack.push(i);
-    } else if(expression[i] === '}') {
-        if(stack.length === 0) {
-            return ++i;
-        }
-        stack.pop();
-    } else if(expression[i] === '[') {
-        stack.push(i);
-    } else if(expression[i] === ']') {
-        if(stack.length === 0) {
-            return ++i;
-        }
-        stack.pop();
     }
-}
 
-if(stack.length > 0) {
-    return -1;
-} else {
+    if (stack.length > 0) {
+        return -1;
+    }
+
     return 0;
-}
 }
 
 console.log(checkBrackets('((a + b) * (c - d))'));

@@ -44,7 +44,7 @@ function countWordsWithSameLetters(sentence) {
     let count = 0;
     let words = sentence.split(" ");
  for (let i = 0; i < words.length; i++) {
-        if (words[i][0].toLowerCase() === words[i][words[i].length - 1].toLowerCase()) {
+        if (words[i][0].toUpperCase() === words[i][words[i].length - 1].toUpperCase()) {
             count++;
         }
     }

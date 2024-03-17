@@ -16,12 +16,16 @@ function countUppercaseLetters(str) {
         console.log(countUppercaseLetters('HellO, World!'));
 // Задание 2
 function combineStrings(N1, N2, S1, S2) {
-let First = S1.slice(0, N1);
-let Second = S2.slice(0, N2);
-return (First + Second);
+    let First = S1.slice(0, N1);
+    let Second = S2.slice(-N2);
+    if (N1 != 0) {
+        return (First + Second);;
+    } else {
+        return "";
+    }
 }
 
-console.log(combineStrings(3, 2, 'Hello', 'World'));
+console.log(combineStrings(3, 2, 'Hello', 'World')); 
 // Задание 3
 function containsSubstring(S, S0) {
     return S.includes(S0);

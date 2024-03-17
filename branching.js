@@ -10,9 +10,9 @@ console.log(incrementIfPositive(5));
 
 // Задание 2
 function getIndexOfSmallerNumber(number1, number2) {
-    if (5 < 3) {
+    if (number1 < number2) {
         return 1;
-    }   else if (3 < 5) {
+    }   else if (number2 < number1) {
         return 2;
     }   else {
         return "Числа равны";
@@ -22,21 +22,31 @@ console.log(getIndexOfSmallerNumber(5, 3));
 
 // Задание 3
 function findMiddleNumber(number1, number2, number3) {
-    let numbers = [5, 3, 7];
-    numbers.sort(function(a, b) {
-        return a - b;
-    });
-    return numbers[1];
+  let min = number1;
+  let max = number1;
+  if (number2 < min) {
+    min = number2;
+  } else if (number2 > max) {
+    max = number2;
+  }
+  if (number3 < min) {
+    min = number3;
+  } else if (number3 > max) {
+    max = number3;
+  }
+  let middle = number1 + number2 + number3 - min - max;
+  return middle;
 }
-console.log(findMiddleNumber(5,3));
+
+console.log(findMiddleNumber(5, 8, 3)); 
 
 // Задание 4
 function findUniqueNumber(number1, number2, number3, number4) {
-    if (2 === 2 && 2 === 3) {
+    if (number1 === number2 && number2 === number3) {
         return 4;
-    } else if (2 === 2 && 2 === 2) {
+    } else if (number1 === number2 && number2 === number4) {
         return 3;
-    } else if (2 === 3 && 3 === 2) {
+    } else if (number1 === number3 && number3 === number4) {
         return 2;
     } else {
         return 1;
@@ -47,15 +57,15 @@ console.log(findUniqueNumber(2,2,3,2));
 
 // Задание 5
 function calculateF(x) {
-    if (x < -1) {
+    if (x < 0) {
         return 0;
-    } else if (Math.floor(-1) % 2 === -1) {
+    } else if (x >= 0 && x < 1 || x >= 2 && x < 3) {
         return 1;
     } else {
         return -1;
     }
 }
-console.log(calculateF(-1));
+console.log(calculateF(1.5));
 
 // Задание 6
 function describeNumber(n) {

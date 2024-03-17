@@ -38,11 +38,11 @@ function checkOddThreeDigitNumber(x1) {
 console.log(checkOddThreeDigitNumber(135));
 
 //Задание 7
-    function checkUniqueDigits(number) {
-  if (number < 100 || number > 999) {
+function checkUniqueDigits(number) {
+    number = Math.abs(number);
+    if (number < 100 || number > 999) {
     return false;
   }
-number = Math.abs(number);
     return Boolean((Math.floor(number/100) != number%10 && number%10 != Math.floor(number%100/10) && Math.floor(number/100) != Math.floor(number%100/10)));
 }
 console.log(checkUniqueDigits(-1234));
